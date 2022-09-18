@@ -15,6 +15,8 @@ pnpm add -D tsconfig-multiple-extends
 
 ## Usage
 
+-   Star the [github repo](https://github.com/Alexandre-Fernandez/tsconfig-multiple-extends) 😎
+
 ### CLI
 
 ```css
