@@ -1,6 +1,6 @@
 {
 	"name": "tsconfig-multiple-extends",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "Extend multiple tsconfigs from a single file.",
 	"author": "alexandre-fernandez",
 	"license": "MIT",
