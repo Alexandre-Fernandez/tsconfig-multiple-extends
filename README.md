@@ -1,7 +1,9 @@
 # tsconfig-multiple-extends
+
 > Extend multiple tsconfigs from a single file.
 
 ## Installation
+
 ```
 // npm
 npm install -D tsconfig-multiple-extends
@@ -25,20 +27,20 @@ npx tsconfig-multiple-extends [path_to_config] --extends [path_to_extended_confi
 import { Tsconfig } from "tsconfig-multiple-extends"
 
 new Tsconfig("./path/to/tsconfig.json")
-  .addExtends("./path/to/extended/tsconfig.json")
-  .addExtends("./path/to/another/extended/tsconfig.json")
-  .save()
+	.addExtends("./path/to/extended/tsconfig.json")
+	.addExtends("./path/to/another/extended/tsconfig.json")
+	.save()
 ```
 
 ## Reference
 
 ### CLI
 
-| Option      | Shortcut    | Argument    | Description                                                                                       |
-| ----------- | ----------- | ----------- | ------------------------------------------------------------------------------------------------- |
-| --extends   | -xt         | ...string[] | Sets what tsconfigs should the provided one extend                                                |  
-| --save      | -sv         | string      | Sets the output path                                                                              |
-| --noResolve | -nr         | bool        | If present `tsconfig-multiple-extends` won't resolve the extended configs `extends` property.[^1] |
+| Option      | Shortcut | Argument    | Description                                                                                       |
+| ----------- | -------- | ----------- | ------------------------------------------------------------------------------------------------- |
+| --extends   | -xt      | ...string[] | Sets what tsconfigs should the provided one extend                                                |
+| --save      | -sv      | string      | Sets the output path                                                                              |
+| --noResolve | -nr      | bool        | If present `tsconfig-multiple-extends` won't resolve the extended configs `extends` property.[^1] |
 
 #### Example
 
