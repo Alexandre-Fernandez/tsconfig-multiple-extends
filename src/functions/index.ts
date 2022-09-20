@@ -37,9 +37,21 @@ export function formatTsconfigJson(json: string) {
 	let indentation = 0
 	let arrayNesting = 0
 	const isArray = () => !!arrayNesting
+	let isString = false
 
 	for (let i = 0; i < json.length; i++) {
 		switch (json[i]) {
+			case '"':
+				if (
+					json?.[i - 1] === ":" ||
+					(json?.[i - 1] === " " && json?.[i - 2] === ":")
+				) {
+					isString = true
+				} else if (isString && json?.[i - 1] !== "\\") {
+					isString = false
+				}
+				formatted += '"'
+				break
 			case "[":
 				arrayNesting += 1
 				formatted += "["
@@ -61,7 +73,8 @@ export function formatTsconfigJson(json: string) {
 				else formatted += `,\n${"\t".repeat(indentation)}`
 				break
 			case ":":
-				formatted += ": "
+				formatted += ":"
+				if (!isString) formatted += " "
 				break
 			default:
 				formatted += json[i]
