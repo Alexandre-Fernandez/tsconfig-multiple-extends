@@ -2,6 +2,9 @@
 
 > Extend multiple tsconfigs from a single file.
 
+This feature might be added as a default typescript feature, [#50403](https://github.com/microsoft/TypeScript/pull/50403).
+When it is added just use that instead of this package.
+
 ## Installation
 
 ```
