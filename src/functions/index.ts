@@ -81,5 +81,5 @@ export function formatTsconfigJson(json: string) {
 		}
 	}
 
-	return formatted
+	return `${formatted}\n`
 }
